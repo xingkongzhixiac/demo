@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: demo
+
+  # ... database, jpa, flyway 配置保持原样 ...
+  datasource:
+    url: "jdbc:mysql://localhost:3306/analyze?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true"
+    username: root
+    password: "123456"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    # ... 省略中间内容 ...
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        # ...
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+# ===================================================================
+# = AI 配置 (注意：这里必须顶格写，不能有缩进，与最上面的 spring 对齐) =
+# ===================================================================
+ai:
+  api:
+    url: https://api.siliconflow.cn/v1/chat/completions
+    key: sk-qtmzrpisfetlywieqmhouuxxbnljvynodajzlghzjaadslvv
+    model: deepseek-ai/DeepSeek-R1-Distill-Qwen-7B

@@ -1,0 +1,23 @@
+CREATE TABLE lagou_data (
+                            id BIGINT PRIMARY KEY,
+                            category VARCHAR(255),
+                            big_category VARCHAR(255),
+                            position_id BIGINT,
+                            position_name VARCHAR(255),
+                            company_id BIGINT,
+                            company_full_name VARCHAR(255),
+                            company_size VARCHAR(100),
+                            industry_field TEXT,
+                            finance_stage VARCHAR(100),
+                            position_type TEXT,
+                            create_time VARCHAR(100),
+                            city VARCHAR(100),
+                            district VARCHAR(100),
+                            salary VARCHAR(100),
+                            work_year VARCHAR(100),
+                            job_nature VARCHAR(100),
+                            education VARCHAR(100),
+                            position_detail TEXT,
+                            position_advantage TEXT,
+                            created_at VARCHAR(100)
+);
