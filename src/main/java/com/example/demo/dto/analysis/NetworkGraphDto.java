@@ -1,3 +1,4 @@
+//NetworkGraphDto.java
 package com.example.demo.dto.analysis;
 
 import lombok.AllArgsConstructor;
